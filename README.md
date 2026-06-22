@@ -32,6 +32,13 @@ frontend/EstateFlow.Client
   src/api, components, layouts, pages, routes, types, utils
 ```
 
+# Müşteri Arayüzü
+<img width="1893" height="830" alt="Ekran görüntüsü 2026-06-22 170702" src="https://github.com/user-attachments/assets/290081a4-7c31-4c04-b6df-a73523ed3faa" />
+
+
+# Yönetici Kontrol Arayüzü
+<img width="1913" height="953" alt="Ekran görüntüsü 2026-06-22 170715" src="https://github.com/user-attachments/assets/31d26175-1d80-4eb4-afd1-45388b9e06ab" />
+
 ## Uygulama Kökleri
 
 ```text

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>EstateFlow - Advisor Elite Login</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Inter:wght@400;500;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:wght@100..900&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#ffdcc6",
+                        "tertiary-container": "#522c0d",
+                        "surface-container-low": "#f6f3eb",
+                        "surface-dim": "#dcdad2",
+                        "on-primary-fixed-variant": "#304b4e",
+                        "inverse-surface": "#31312b",
+                        "primary-fixed": "#cbe8eb",
+                        "on-tertiary-container": "#ca926b",
+                        "on-primary-fixed": "#021f22",
+                        "primary": "#072427",
+                        "surface-container-highest": "#e5e2da",
+                        "surface-container": "#f1eee6",
+                        "on-secondary-fixed": "#261900",
+                        "tertiary": "#371800",
+                        "on-secondary-fixed-variant": "#5c4202",
+                        "on-surface-variant": "#414849",
+                        "secondary": "#775a1a",
+                        "on-tertiary": "#ffffff",
+                        "surface-bright": "#fcf9f1",
+                        "secondary-container": "#fdd589",
+                        "on-background": "#1c1c17",
+                        "secondary-fixed-dim": "#e8c177",
+                        "surface-container-high": "#ebe8e0",
+                        "on-error-container": "#93000a",
+                        "on-error": "#ffffff",
+                        "on-surface": "#1c1c17",
+                        "background": "#fcf9f1",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed-dim": "#f7ba90",
+                        "inverse-primary": "#afcccf",
+                        "primary-fixed-dim": "#afcccf",
+                        "outline-variant": "#c1c8c8",
+                        "surface": "#fcf9f1",
+                        "error": "#ba1a1a",
+                        "on-secondary-container": "#775b1b",
+                        "on-primary-container": "#88a4a7",
+                        "on-tertiary-fixed-variant": "#663d1d",
+                        "inverse-on-surface": "#f3f1e9",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed": "#ffdea3",
+                        "on-secondary": "#ffffff",
+                        "surface-tint": "#486366",
+                        "on-tertiary-fixed": "#301400",
+                        "surface-variant": "#e5e2da",
+                        "primary-container": "#1f3a3d",
+                        "on-primary": "#ffffff",
+                        "outline": "#727879"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "1.5rem",
+                        "container-padding-desktop": "2.5rem",
+                        "stack-md": "1rem",
+                        "container-padding-mobile": "1rem",
+                        "stack-sm": "0.5rem",
+                        "stack-lg": "2rem",
+                        "base": "4px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "headline-md": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "headline-sm": ["Montserrat"],
+                        "display-lg": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-lg": ["Montserrat"],
+                        "headline-lg-mobile": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", { "lineHeight": "1", "fontWeight": "500" }],
+                        "body-sm": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "headline-sm": ["20px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "1.2", "fontWeight": "600" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 30px rgba(31, 58, 61, 0.1);
+        }
+        .gold-glow:focus {
+            box-shadow: 0 0 0 2px #C8A45D33;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body-md text-on-surface min-h-screen flex items-center justify-center p-gutter relative overflow-hidden">
+<!-- Background Layer -->
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center brightness-[0.9]" data-alt="A wide, sweeping architectural photograph of a high-end luxury penthouse interior at dusk. Large floor-to-ceiling windows reveal a soft urban skyline. The interior features deep emerald velvet furnishings and subtle gold trim accents, reflecting a warm parchment light. The mood is sophisticated, professional, and quiet, with a focus on geometric silhouettes and high-quality materials." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBFAFZkW06lc52wWjUnmKmVjBZdCcOTUXqyYSwpmFAQcy6j1GFAallgcsA4Xg3Te7zfEjVeXO76hJNwcx2fe2bGUJmc_pp75UgAGk2F5wun4vmY4xILfRdU9-VuG1AYHQ9S8fH0MhcSgYAcIg3c2d0eBsyEWkFD4p_3HBqTlPHWlLYescgF_W9UCjNucOsltSlHapDcBn8gPw01BLvSUpWu6nC33-bb81C9jcptOJETIU8dHDf4C8p7cKNdl8zzmdyYPWrXzNW6CH0B')"></div>
+<div class="absolute inset-0 bg-primary/20 mix-blend-multiply"></div>
+<div class="absolute inset-0 bg-gradient-to-tr from-primary/60 via-transparent to-primary/40"></div>
+</div>
+<!-- Login Container -->
+<main class="relative z-10 w-full max-w-[480px]">
+<div class="glass-card rounded-xl p-10 flex flex-col items-center">
+<!-- Brand Identity -->
+<div class="mb-10 text-center">
+<img alt="EstateFlow Logo" class="w-20 h-20 mb-4 mx-auto rounded-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfAu38N-dKoxicfJdIiKO8uMb8dOb1hkZe9SmPyKVYiCuNCdOVk2dbOX0x3BUcUrzQl4fG5r_c7RIsvvyHI0zGurhXALPdZfVOk5JOssfApZowDItEcFNjbd1rsCHPIs753OodGTaUtR-iC9VBPcDEZePbWDbckD2iHnQxDzzSxNenWsFLU0wXr9_MaqHkwFxeYwqUKTt8h0KBE4CByQJlKozc2IBE17aAG6r57h9X3yjrgTdCkKOIl3zC8qvUxdWBwDOnidP2NTaR"/>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">EstateFlow</h1>
+<p class="font-label-md text-label-md text-on-surface-variant mt-2">ADVISORY ELITE PORTAL</p>
+</div>
+<!-- Login Form -->
+<form action="#" class="w-full space-y-6" onsubmit="event.preventDefault();">
+<!-- Email Field -->
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-on-surface-variant block uppercase tracking-wider" for="email">Professional Email</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">mail</span>
+<input class="w-full pl-10 pr-4 py-3 border border-outline-variant rounded-lg bg-surface-container-lowest focus:outline-none focus:border-secondary gold-glow transition-all duration-200" id="email" name="email" placeholder="name@agency.com" required="" type="email"/>
+</div>
+</div>
+<!-- Password Field -->
+<div class="space-y-2">
+<div class="flex justify-between items-end">
+<label class="font-label-md text-label-md text-on-surface-variant block uppercase tracking-wider" for="password">Access Key</label>
+<a class="font-label-sm text-label-sm text-secondary hover:underline transition-all" href="#">Forgot password?</a>
+</div>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">lock</span>
+<input class="w-full pl-10 pr-4 py-3 border border-outline-variant rounded-lg bg-surface-container-lowest focus:outline-none focus:border-secondary gold-glow transition-all duration-200" id="password" name="password" placeholder="••••••••" required="" type="password"/>
+</div>
+</div>
+<!-- Remember Me -->
+<div class="flex items-center space-x-2">
+<input class="w-4 h-4 rounded border-outline-variant text-primary focus:ring-secondary cursor-pointer" id="remember" type="checkbox"/>
+<label class="font-body-sm text-body-sm text-on-surface-variant cursor-pointer" for="remember">Trust this device for 30 days</label>
+</div>
+<!-- Login Button -->
+<button class="w-full bg-[#C8A45D] hover:bg-[#B6924D] text-white font-label-md text-label-md py-4 rounded-lg shadow-sm transform active:scale-[0.98] transition-all duration-150 flex justify-center items-center gap-2" type="submit">
+<span>Secure Sign In</span>
+<span class="material-symbols-outlined text-[18px]">login</span>
+</button>
+</form>
+<!-- Footer Help -->
+<div class="mt-10 pt-6 border-t border-outline-variant/30 w-full text-center">
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Authorized Access Only. 
+                    <a class="text-primary font-semibold hover:underline" href="#">Request Credentials</a>
+</p>
+</div>
+</div>
+<!-- System Status Mini-Indicator -->
+<div class="mt-6 flex justify-center items-center gap-4 text-white/70">
+<div class="flex items-center gap-1.5">
+<div class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></div>
+<span class="font-label-sm text-label-sm uppercase">Global Nodes Active</span>
+</div>
+<div class="h-4 w-px bg-white/20"></div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm uppercase">Version 4.2.0-Elite</span>
+</div>
+</div>
+</main>
+<!-- Decorative Elements -->
+<div class="fixed bottom-0 right-0 p-gutter text-white/40 pointer-events-none select-none hidden lg:block">
+<p class="font-headline-lg opacity-10">PRECISION. EXCLUSIVITY. FLOW.</p>
+</div>
+<script>
+        // Micro-interactions for input focus
+        const inputs = document.querySelectorAll('input');
+        inputs.forEach(input => {
+            input.addEventListener('focus', () => {
+                input.parentElement.querySelector('.material-symbols-outlined').style.color = '#C8A45D';
+            });
+            input.addEventListener('blur', () => {
+                input.parentElement.querySelector('.material-symbols-outlined').style.color = '';
+            });
+        });
+    </script>
+</body></html>

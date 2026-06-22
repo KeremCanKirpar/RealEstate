@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Property Detail | EstateFlow Advisory Elite</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#ffdcc6",
+                        "tertiary-container": "#522c0d",
+                        "surface-container-low": "#f6f3eb",
+                        "surface-dim": "#dcdad2",
+                        "on-primary-fixed-variant": "#304b4e",
+                        "inverse-surface": "#31312b",
+                        "primary-fixed": "#cbe8eb",
+                        "on-tertiary-container": "#ca926b",
+                        "on-primary-fixed": "#021f22",
+                        "primary": "#072427",
+                        "surface-container-highest": "#e5e2da",
+                        "surface-container": "#f1eee6",
+                        "on-secondary-fixed": "#261900",
+                        "tertiary": "#371800",
+                        "on-secondary-fixed-variant": "#5c4202",
+                        "on-surface-variant": "#414849",
+                        "secondary": "#775a1a",
+                        "on-tertiary": "#ffffff",
+                        "surface-bright": "#fcf9f1",
+                        "secondary-container": "#fdd589",
+                        "on-background": "#1c1c17",
+                        "secondary-fixed-dim": "#e8c177",
+                        "surface-container-high": "#ebe8e0",
+                        "on-error-container": "#93000a",
+                        "on-error": "#ffffff",
+                        "on-surface": "#1c1c17",
+                        "background": "#fcf9f1",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed-dim": "#f7ba90",
+                        "inverse-primary": "#afcccf",
+                        "primary-fixed-dim": "#afcccf",
+                        "outline-variant": "#c1c8c8",
+                        "surface": "#fcf9f1",
+                        "error": "#ba1a1a",
+                        "on-secondary-container": "#775b1b",
+                        "on-primary-container": "#88a4a7",
+                        "on-tertiary-fixed-variant": "#663d1d",
+                        "inverse-on-surface": "#f3f1e9",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed": "#ffdea3",
+                        "on-secondary": "#ffffff",
+                        "surface-tint": "#486366",
+                        "on-tertiary-fixed": "#301400",
+                        "surface-variant": "#e5e2da",
+                        "primary-container": "#1f3a3d",
+                        "on-primary": "#ffffff",
+                        "outline": "#727879"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "1.5rem",
+                        "container-padding-desktop": "2.5rem",
+                        "stack-md": "1rem",
+                        "container-padding-mobile": "1rem",
+                        "stack-sm": "0.5rem",
+                        "stack-lg": "2rem",
+                        "base": "4px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "headline-md": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "headline-sm": ["Montserrat"],
+                        "display-lg": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-lg": ["Montserrat"],
+                        "headline-lg-mobile": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", {"lineHeight": "1", "fontWeight": "500"}],
+                        "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "headline-sm": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "1.2", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .luxury-card {
+            background-color: white;
+            padding: 24px;
+            box-shadow: 0px 4px 20px rgba(31, 58, 61, 0.05);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .luxury-card:hover {
+            transform: scale(1.01);
+            box-shadow: 0px 10px 30px rgba(31, 58, 61, 0.08);
+        }
+        .inner-stroke {
+            box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+        }
+        body {
+            background-color: #F5F2EA; /* Level 0 Base */
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-surface antialiased">
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-full w-[280px] bg-primary-container text-on-primary-container shadow-sm z-50 flex flex-col p-gutter">
+<div class="mb-10">
+<h1 class="font-headline-lg text-headline-lg font-bold text-on-primary">EstateFlow</h1>
+<p class="font-label-md text-label-md text-on-primary-container/60">Advisory Elite</p>
+</div>
+<nav class="flex-grow">
+<!-- Properties is ACTIVE -->
+<a class="flex items-center gap-4 text-on-primary-container/70 hover:text-on-primary px-4 py-3 mb-1 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label-md text-label-md">Dashboard</span>
+</a>
+<a class="flex items-center gap-4 bg-primary text-on-primary rounded-lg px-4 py-3 mb-1 scale-[0.98] transition-transform" href="#">
+<span class="material-symbols-outlined">domain</span>
+<span class="font-label-md text-label-md">Properties</span>
+</a>
+<a class="flex items-center gap-4 text-on-primary-container/70 hover:text-on-primary px-4 py-3 mb-1 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined">groups</span>
+<span class="font-label-md text-label-md">Customers</span>
+</a>
+<a class="flex items-center gap-4 text-on-primary-container/70 hover:text-on-primary px-4 py-3 mb-1 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined">calendar_today</span>
+<span class="font-label-md text-label-md">Appointments</span>
+</a>
+<a class="flex items-center gap-4 text-on-primary-container/70 hover:text-on-primary px-4 py-3 mb-1 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined">assignment</span>
+<span class="font-label-md text-label-md">Tasks</span>
+</a>
+<a class="flex items-center gap-4 text-on-primary-container/70 hover:text-on-primary px-4 py-3 mb-1 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="font-label-md text-label-md">Reports</span>
+</a>
+<a class="flex items-center gap-4 text-on-primary-container/70 hover:text-on-primary px-4 py-3 mb-1 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined">description</span>
+<span class="font-label-md text-label-md">Documents</span>
+</a>
+<a class="flex items-center gap-4 text-on-primary-container/70 hover:text-on-primary px-4 py-3 mb-1 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-label-md text-label-md">Settings</span>
+</a>
+</nav>
+<div class="mt-auto">
+<button class="w-full bg-secondary text-on-secondary py-3 rounded-lg font-label-md text-label-md transition-transform hover:scale-[1.02] active:scale-95 inner-stroke">
+                Upgrade to Premium
+            </button>
+</div>
+</aside>
+<!-- TopNavBar -->
+<header class="fixed top-0 right-0 w-[calc(100%-280px)] h-16 bg-surface border-b border-outline-variant flex justify-between items-center px-container-padding-desktop z-40">
+<div class="flex items-center gap-4 flex-1">
+<div class="relative w-full max-w-md">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-surface-container border border-outline-variant rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary/20 focus:border-secondary transition-all" placeholder="Search properties, clients..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="relative text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-0 right-0 w-2 h-2 bg-error rounded-full"></span>
+</button>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-lg font-label-md text-label-md inner-stroke hover:opacity-90 transition-opacity">
+                Quick Add
+            </button>
+<div class="flex items-center gap-3 border-l border-outline-variant pl-6">
+<div class="text-right">
+<p class="font-label-md text-label-md text-primary">Julian Vane</p>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-wider">Senior Advisor</p>
+</div>
+<img class="w-10 h-10 rounded-full object-cover ring-2 ring-secondary/20" data-alt="A professional studio portrait of a high-end real estate advisor in a sharp charcoal suit. The lighting is soft and directional, casting subtle shadows that emphasize confidence and expertise. The background is a blurred, warm-toned luxury interior with gold accents, matching the brand's sophisticated and exclusive aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhG6BcaT7pPI2zv8TksdzgUCBYf8I6qW33EHIFiuSwv2P2aMqrsXfuERZ6SpJ5eViJHwt5TnUXTEftocbaqQIe3n0FevpZLGHD90wSks-TXCUGUfPRqwb4VwL4pCoQ5ifkymNLNh_sYrw96JzyukwEyAlhdKC4Am3MfX2G5f7URTdoI-7nGCmVCnpwrma_FNlGCxcu1HU9dZdsK-J8NxyXp3lSmnXqXoQ_N2vV5KioL42N19iMwGK2SU-wX1BVqlBkMnClX3hAVFqH"/>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="ml-[280px] pt-16 min-h-screen">
+<div class="max-w-[1440px] mx-auto p-container-padding-desktop">
+<!-- Breadcrumbs & Actions Row -->
+<div class="flex justify-between items-center mb-8">
+<div>
+<nav class="flex gap-2 text-on-surface-variant font-label-sm text-label-sm mb-2 uppercase tracking-widest">
+<a class="hover:text-primary" href="#">Portfolio</a>
+<span>/</span>
+<a class="hover:text-primary" href="#">Residential</a>
+<span>/</span>
+<span class="text-primary font-bold">The Obsidian Penthouse</span>
+</nav>
+<h2 class="font-headline-lg text-headline-lg text-primary">The Obsidian Penthouse</h2>
+</div>
+<div class="flex gap-3">
+<button class="flex items-center gap-2 px-6 py-2.5 rounded-lg border border-outline-variant text-primary font-label-md text-label-md hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined">edit</span>
+                        Edit
+                    </button>
+<button class="flex items-center gap-2 px-6 py-2.5 rounded-lg border border-outline-variant text-primary font-label-md text-label-md hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined">request_quote</span>
+                        Mark as Rented
+                    </button>
+<button class="flex items-center gap-2 px-6 py-2.5 rounded-lg bg-secondary text-on-secondary font-label-md text-label-md inner-stroke hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined">verified</span>
+                        Mark as Sold
+                    </button>
+</div>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-12 gap-6">
+<!-- Main Gallery & Info (Left Column) -->
+<div class="col-span-8 space-y-6">
+<!-- Feature Image Gallery -->
+<div class="grid grid-cols-4 grid-rows-2 gap-3 h-[500px]">
+<div class="col-span-3 row-span-2 relative group overflow-hidden rounded-xl">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A breathtaking view of a modern luxury penthouse living room with floor-to-ceiling windows overlooking a twilight city skyline. The interior features dark obsidian marble floors, warm ambient cove lighting, and plush contemporary furniture in deep teal and parchment tones. The atmosphere is serene, exclusive, and hyper-modern, reflecting a high-net-worth lifestyle." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDQe1_q7J37mk7NJ48IB8eqwYrsHZ0ODouDoP4j5TVaAtdHVhisj4Bs1u1_aNSY2V7himK-9U7DywYbTWnVLHGP5cD9gaLRz5ZQuqueoHwpOAfQOC3orJvJ_CWd14EvmbarB9mSqmcS61V_uLwkosWRMLn_6VizSC6ydDtSfL-R6R6z4IFftuiXUQzoZzZNwz82sO9di8i9SlQOv47WCoSySmmVKKpXbKylcKduCnJc5Wwq6PPaYeIcudrIRbQNwTbd0mvGYasY0OXh')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<div class="col-span-1 row-span-1 overflow-hidden rounded-xl">
+<div class="w-full h-full bg-cover bg-center hover:scale-110 transition-transform duration-500" data-alt="A detailed shot of a luxury master bathroom featuring a free-standing matte black bathtub, brushed gold fixtures, and textured stone walls. Soft morning light filters through a frosted window, creating a spa-like, tranquil ambiance. The design is minimalist yet tactile, emphasizing high-quality materials and refined craftsmanship." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCTc3eqVMEOzE0Hac9jDo9cpKoaAJgFoH6lQvWsumoGXL38bez1D7xMC1D539VJC9UyxlmxX57JWO_B5pnSG7Indg83iOsL9m9f5qvbVvezGYnUZse6hJBGPnamT9xlk9zpT4VnPtsrOfOlfpjog0AGai4nzuti51JDomgEu2SwjXWAkAkFi_TsGbnk-Osx2g1Ft7PDo1Mt_Jhfdzes4DwAedixJHoeOTeVONftpoMWskVBLeFJeOR9ffnCeohJRCeLSfTmrzA1GBy6')"></div>
+</div>
+<div class="col-span-1 row-span-1 relative overflow-hidden rounded-xl">
+<div class="w-full h-full bg-cover bg-center hover:scale-110 transition-transform duration-500" data-alt="An expansive private terrace of a high-end property during the golden hour. The space includes a designer fire pit, low-profile outdoor lounge seating, and manicured architectural greenery. The warm orange glow of the sunset contrasts beautifully with the cool deep teal accents of the decor, conveying a sense of quiet luxury and peacefulness." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA-e1o5g4TaxU4u3vz2OgzRsqbb9P21W61Jpv-FnwLyKlS9F6xYQsX2l-Mq-CPd63CrKJEgqMkrjCnqOutC1xP3aV4u8faxss4NnCrv7byE0oIqK-63fsXHR7Mqep3WH7xAASwPrZ5fTJ2I_vwgUI2pufs6Z21jN-KKtm9iV9c-TiM-CUSUJdDqDGZZy3EVRBUDXFnY_DHyfT_SOySjVzwh9HMObvbe_Hikd3H5-OWcYuERg1L5vQRRzmd3ZlAachrmbRo7R7JYQyEy')"></div>
+<button class="absolute inset-0 bg-primary/60 flex flex-col items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-4xl mb-1">grid_view</span>
+<span class="font-label-md text-label-md">+12 Photos</span>
+</button>
+</div>
+</div>
+<!-- Description Card -->
+<div class="luxury-card rounded-xl">
+<div class="flex justify-between items-start mb-6">
+<div>
+<div class="flex gap-2 mb-2">
+<span class="px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full font-label-sm text-label-sm uppercase">Exclusive Listing</span>
+<span class="px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed-variant rounded-full font-label-sm text-label-sm uppercase">Penthouse</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary">Property Narrative</h3>
+</div>
+<div class="text-right">
+<p class="text-on-surface-variant font-label-sm text-label-sm uppercase mb-1">Asking Price</p>
+<p class="font-headline-lg text-headline-lg text-secondary">$12,450,000</p>
+</div>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed mb-8">
+                            Suspended above the city, The Obsidian Penthouse represents the pinnacle of architectural achievement. Spanning two full floors with bespoke interiors by Studio Vane, this residence features a rare double-height grand salon, private internal elevator, and 360-degree views that capture the pulse of the metropolis. Every surface has been curated—from the hand-honed basalt hearth to the smoked oak cabinetry.
+                        </p>
+<div class="grid grid-cols-4 gap-4 p-6 bg-surface-container rounded-lg">
+<div class="text-center border-r border-outline-variant">
+<span class="material-symbols-outlined text-secondary mb-2">bed</span>
+<p class="font-headline-sm text-headline-sm text-primary">5</p>
+<p class="text-on-surface-variant font-label-sm text-label-sm">Bedrooms</p>
+</div>
+<div class="text-center border-r border-outline-variant">
+<span class="material-symbols-outlined text-secondary mb-2">bathtub</span>
+<p class="font-headline-sm text-headline-sm text-primary">6.5</p>
+<p class="text-on-surface-variant font-label-sm text-label-sm">Bathrooms</p>
+</div>
+<div class="text-center border-r border-outline-variant">
+<span class="material-symbols-outlined text-secondary mb-2">square_foot</span>
+<p class="font-headline-sm text-headline-sm text-primary">8,200</p>
+<p class="text-on-surface-variant font-label-sm text-label-sm">Sq. Ft.</p>
+</div>
+<div class="text-center">
+<span class="material-symbols-outlined text-secondary mb-2">garage</span>
+<p class="font-headline-sm text-headline-sm text-primary">4</p>
+<p class="text-on-surface-variant font-label-sm text-label-sm">Parking</p>
+</div>
+</div>
+</div>
+<!-- Specs List (Horizontal Bento Style) -->
+<div class="grid grid-cols-2 gap-6">
+<div class="luxury-card rounded-xl">
+<h4 class="font-label-md text-label-md text-secondary uppercase tracking-widest mb-4">Interior Specifications</h4>
+<ul class="space-y-3">
+<li class="flex justify-between border-b border-outline-variant pb-2">
+<span class="text-on-surface-variant">Chef's Kitchen</span>
+<span class="font-bold text-primary">Gaggenau™ Series 400</span>
+</li>
+<li class="flex justify-between border-b border-outline-variant pb-2">
+<span class="text-on-surface-variant">Climate Control</span>
+<span class="font-bold text-primary">Triple-Zone HVAC</span>
+</li>
+<li class="flex justify-between border-b border-outline-variant pb-2">
+<span class="text-on-surface-variant">Smart Home</span>
+<span class="font-bold text-primary">Crestron Integrated</span>
+</li>
+<li class="flex justify-between">
+<span class="text-on-surface-variant">Ceiling Height</span>
+<span class="font-bold text-primary">12' to 24' Clear</span>
+</li>
+</ul>
+</div>
+<div class="luxury-card rounded-xl">
+<h4 class="font-label-md text-label-md text-secondary uppercase tracking-widest mb-4">Building Amenities</h4>
+<ul class="space-y-3">
+<li class="flex justify-between border-b border-outline-variant pb-2">
+<span class="text-on-surface-variant">Concierge</span>
+<span class="font-bold text-primary">24/7 White Glove</span>
+</li>
+<li class="flex justify-between border-b border-outline-variant pb-2">
+<span class="text-on-surface-variant">Wellness</span>
+<span class="font-bold text-primary">Olympic Pool &amp; Spa</span>
+</li>
+<li class="flex justify-between border-b border-outline-variant pb-2">
+<span class="text-on-surface-variant">Security</span>
+<span class="font-bold text-primary">Biometric Access</span>
+</li>
+<li class="flex justify-between">
+<span class="text-on-surface-variant">Transportation</span>
+<span class="font-bold text-primary">Private Heliport</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Appointment History Timeline -->
+<div class="luxury-card rounded-xl">
+<h4 class="font-headline-sm text-headline-sm text-primary mb-6">Activity Timeline</h4>
+<div class="relative pl-8 space-y-8 before:absolute before:left-[11px] before:top-2 before:bottom-2 before:w-[2px] before:bg-outline-variant">
+<div class="relative">
+<span class="absolute -left-[27px] top-1 w-4 h-4 rounded-full bg-secondary border-4 border-surface"></span>
+<div class="flex justify-between items-start">
+<div>
+<p class="font-label-md text-label-md text-primary">Final Walkthrough Completed</p>
+<p class="text-body-sm text-on-surface-variant">Conducted by Arthur Sterling for Client: Victor Reznov</p>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Today, 10:30 AM</span>
+</div>
+</div>
+<div class="relative">
+<span class="absolute -left-[27px] top-1 w-4 h-4 rounded-full bg-outline border-4 border-surface"></span>
+<div class="flex justify-between items-start">
+<div>
+<p class="font-label-md text-label-md text-primary">Offer Received: $12.1M</p>
+<p class="text-body-sm text-on-surface-variant">From The Grayson Family Trust. Pending advisory review.</p>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Oct 24, 2023</span>
+</div>
+</div>
+<div class="relative">
+<span class="absolute -left-[27px] top-1 w-4 h-4 rounded-full bg-outline border-4 border-surface"></span>
+<div class="flex justify-between items-start">
+<div>
+<p class="font-label-md text-label-md text-primary">Evening Gala Showing</p>
+<p class="text-body-sm text-on-surface-variant">Private event for 12 prospective high-net-worth individuals.</p>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Oct 20, 2023</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Sidebar Content (Right Column) -->
+<div class="col-span-4 space-y-6">
+<!-- Owner / Contact Details -->
+<div class="luxury-card rounded-xl">
+<h4 class="font-label-md text-label-md text-secondary uppercase tracking-widest mb-6">Principal Owner</h4>
+<div class="flex items-center gap-4 mb-6">
+<img class="w-16 h-16 rounded-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="A portrait of a distinguished elderly gentleman with silver hair, wearing a bespoke pinstripe suit. He exude an air of heritage and wealth. The background is a dimly lit, wood-paneled library, emphasizing a classic, old-money luxury feel that aligns with the premium real estate theme." src="https://lh3.googleusercontent.com/aida-public/AB6AXuADLIOxgFHhsutSKme7Wh0KRIEaYB4hwYEuPY5JkZQV48Jx--Hbn-8nKGZ25yIQh5BHsBX5pdUE4qsRfj71plZd3j1VDT4gZ85g9M9uo15BHAb9WKFQPDhhVu-TE3oRprXhG-kantJvRJZUa6O9H-b6U9O2uYtsRmVvoent9WQA6-zIDtJBBgJfS9UI0GZhsEqbgVSQHfdVZawlFuTQtRykpCHO6Kc4UmO-H-2u7rQ08wssHDjwdc0tcyYfGN4-EEta27f-g9yHRX3c"/>
+<div>
+<p class="font-headline-sm text-headline-sm text-primary">Baron Silas Vane</p>
+<p class="text-on-surface-variant font-label-sm text-label-sm">Legacy Asset Management</p>
+</div>
+</div>
+<div class="space-y-4 mb-6">
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary">phone</span>
+<span class="font-body-sm text-body-sm">+1 (555) 012-8899</span>
+</div>
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary">mail</span>
+<span class="font-body-sm text-body-sm">silas.vane@legacy.advisory</span>
+</div>
+</div>
+<button class="w-full py-3 bg-surface-container text-primary font-label-md text-label-md rounded-lg border border-outline-variant hover:bg-surface-container-high transition-colors">
+                            Request Private Briefing
+                        </button>
+</div>
+<!-- Location / Map -->
+<div class="luxury-card rounded-xl p-0 overflow-hidden">
+<div class="p-6">
+<h4 class="font-label-md text-label-md text-secondary uppercase tracking-widest mb-2">Location</h4>
+<p class="text-primary font-bold">100 Obsidian Plaza, Manhattan NY</p>
+</div>
+<div class="h-48 relative">
+<img class="w-full h-full object-cover grayscale contrast-125" data-alt="A stylized, minimalist architectural map of a Manhattan neighborhood. The map uses a sophisticated color palette of deep teals and soft golds, with major landmarks highlighted in bronze. The aesthetic is clean and professional, designed for high-end advisory services." data-location="Manhattan, New York" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPmhvP2qC_j4g9SRI1d1NMAWOVLs0oOFPJLbLZ4Gb8HeKvwyxDUXQ7RIF3guOMChM0Eyl9jbuP3Gea_NouSBnAglsnmJ2kzrEqPOaOJQ8CrzfxSk0nzBusfWC9O4r6qiOrPc37q_NzAn3I2mYROOd8za4gLEEJ54zFvj-NzuWt0s2lXgF9A8O58vl9QlDjWQ8eWvkQLH1I0ibQAAUVy_jT4oa514ZPJl3FqL39EraHQpnaFZL8vlgYnstuT8BvblsT36KIK4Vi0IQc"/>
+<div class="absolute inset-0 bg-primary/10 pointer-events-none"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+<span class="material-symbols-outlined text-secondary text-4xl" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+</div>
+</div>
+<!-- Customer Matches -->
+<div class="luxury-card rounded-xl">
+<div class="flex justify-between items-center mb-6">
+<h4 class="font-label-md text-label-md text-secondary uppercase tracking-widest">Matched Clients</h4>
+<span class="px-2 py-1 bg-primary text-on-primary rounded text-[10px] font-bold">4 HIGH MATCH</span>
+</div>
+<div class="space-y-4">
+<!-- Match 1 -->
+<div class="flex items-center justify-between group cursor-pointer">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary font-bold">VK</div>
+<div>
+<p class="font-label-md text-label-md text-primary group-hover:text-secondary transition-colors">Viktor Krum</p>
+<p class="text-[11px] text-on-surface-variant">Budget: $15M+</p>
+</div>
+</div>
+<div class="text-right">
+<span class="text-[10px] bg-green-100 text-green-800 px-2 py-0.5 rounded-full font-bold">98% Match</span>
+</div>
+</div>
+<!-- Match 2 -->
+<div class="flex items-center justify-between group cursor-pointer">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary font-bold">EL</div>
+<div>
+<p class="font-label-md text-label-md text-primary group-hover:text-secondary transition-colors">Elena Lombardi</p>
+<p class="text-[11px] text-on-surface-variant">Budget: $10-14M</p>
+</div>
+</div>
+<div class="text-right">
+<span class="text-[10px] bg-green-100 text-green-800 px-2 py-0.5 rounded-full font-bold">92% Match</span>
+</div>
+</div>
+<!-- Match 3 -->
+<div class="flex items-center justify-between group cursor-pointer">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary font-bold">JW</div>
+<div>
+<p class="font-label-md text-label-md text-primary group-hover:text-secondary transition-colors">John Wickham</p>
+<p class="text-[11px] text-on-surface-variant">Budget: $12M Fixed</p>
+</div>
+</div>
+<div class="text-right">
+<span class="text-[10px] bg-yellow-100 text-yellow-800 px-2 py-0.5 rounded-full font-bold">85% Match</span>
+</div>
+</div>
+</div>
+<button class="w-full mt-6 py-2 text-secondary font-label-md text-label-md hover:underline decoration-2 transition-all">
+                            View All Matches (18)
+                        </button>
+</div>
+<!-- Valuation Growth Graph Placeholder -->
+<div class="luxury-card rounded-xl bg-primary-container text-on-primary-container">
+<h4 class="font-label-md text-label-md text-on-primary-container/60 uppercase tracking-widest mb-4">Investment Yield</h4>
+<div class="flex items-end gap-2 h-24 mb-4">
+<div class="flex-1 bg-on-primary-container/10 h-[40%] rounded-t"></div>
+<div class="flex-1 bg-on-primary-container/10 h-[55%] rounded-t"></div>
+<div class="flex-1 bg-on-primary-container/10 h-[50%] rounded-t"></div>
+<div class="flex-1 bg-on-primary-container/20 h-[70%] rounded-t"></div>
+<div class="flex-1 bg-secondary h-[85%] rounded-t"></div>
+<div class="flex-1 bg-on-primary-container/20 h-[60%] rounded-t"></div>
+</div>
+<div class="flex justify-between items-center">
+<div>
+<p class="text-on-primary font-bold text-headline-sm">+4.2%</p>
+<p class="text-[10px] text-on-primary-container/60">ANNUAL APPRECIATION</p>
+</div>
+<span class="material-symbols-outlined text-secondary">trending_up</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Floating Action Interaction -->
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Micro-interaction for primary action buttons
+            const buttons = document.querySelectorAll('button');
+            buttons.forEach(btn => {
+                btn.addEventListener('mousedown', () => btn.classList.add('scale-95'));
+                btn.addEventListener('mouseup', () => btn.classList.remove('scale-95'));
+                btn.addEventListener('mouseleave', () => btn.classList.remove('scale-95'));
+            });
+
+            // Active state simulation for sidebar
+            const navItems = document.querySelectorAll('aside nav a');
+            navItems.forEach(item => {
+                item.addEventListener('click', (e) => {
+                    navItems.forEach(i => {
+                        i.classList.remove('bg-primary', 'text-on-primary', 'scale-[0.98]');
+                        i.classList.add('text-on-primary-container/70', 'hover:text-on-primary');
+                    });
+                    item.classList.add('bg-primary', 'text-on-primary', 'scale-[0.98]');
+                    item.classList.remove('text-on-primary-container/70', 'hover:text-on-primary');
+                });
+            });
+        });
+    </script>
+</body></html>

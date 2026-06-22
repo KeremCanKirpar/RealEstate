@@ -1,0 +1,56 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ["./index.html", "./src/**/*.{ts,tsx}"],
+  theme: {
+    extend: {
+      colors: {
+        estate: {
+          teal: "#072427",
+          tealSoft: "#1f3a3d",
+          ink: "#1c1c17",
+          bronze: "#775a1a",
+          gold: "#d1ad5f",
+          sand: "#fcf9f1",
+          paper: "#ffffff",
+          mist: "#e5e2da",
+          surface: "#fcf9f1",
+          surfaceLow: "#f6f3eb",
+          surfaceContainer: "#f1eee6",
+          outline: "#c1c8c8",
+          muted: "#414849",
+        },
+        primary: "#072427",
+        "primary-container": "#1f3a3d",
+        "primary-fixed": "#cbe8eb",
+        "primary-fixed-dim": "#afcccf",
+        secondary: "#775a1a",
+        "secondary-container": "#fdd589",
+        surface: "#fcf9f1",
+        "surface-container-lowest": "#ffffff",
+        "surface-container-low": "#f6f3eb",
+        "surface-container": "#f1eee6",
+        "surface-container-high": "#ebe8e0",
+        "surface-container-highest": "#e5e2da",
+        "on-surface": "#1c1c17",
+        "on-surface-variant": "#414849",
+        "on-primary": "#ffffff",
+        "on-primary-container": "#88a4a7",
+        outline: "#727879",
+        "outline-variant": "#c1c8c8",
+      },
+      boxShadow: {
+        soft: "0 4px 20px rgba(31, 58, 61, 0.05)",
+        luxury: "0 10px 30px rgba(31, 58, 61, 0.08)",
+        modal: "0 20px 50px rgba(0, 0, 0, 0.1)",
+      },
+      fontFamily: {
+        sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+        heading: ["Montserrat", "Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+      },
+      borderRadius: {
+        card: "1.5rem",
+      },
+    },
+  },
+  plugins: [],
+};

@@ -1,0 +1,9 @@
+{
+  "name": "estateflow-frontend-workspace",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix EstateFlow.Client run dev",
+    "build": "npm --prefix EstateFlow.Client run build",
+    "install:client": "npm --prefix EstateFlow.Client install"
+  }
+}

@@ -1,0 +1,5 @@
+<Solution>
+  <Folder Name="/backend/">
+    <Project Path="backend/EstateFlow.Api/EstateFlow.Api.csproj" />
+  </Folder>
+</Solution>

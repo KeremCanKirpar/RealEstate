@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Add Property | EstateFlow Advisory Elite</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed": "#ffdcc6",
+                    "tertiary-container": "#522c0d",
+                    "surface-container-low": "#f6f3eb",
+                    "surface-dim": "#dcdad2",
+                    "on-primary-fixed-variant": "#304b4e",
+                    "inverse-surface": "#31312b",
+                    "primary-fixed": "#cbe8eb",
+                    "on-tertiary-container": "#ca926b",
+                    "on-primary-fixed": "#021f22",
+                    "primary": "#072427",
+                    "surface-container-highest": "#e5e2da",
+                    "surface-container": "#f1eee6",
+                    "on-secondary-fixed": "#261900",
+                    "tertiary": "#371800",
+                    "on-secondary-fixed-variant": "#5c4202",
+                    "on-surface-variant": "#414849",
+                    "secondary": "#775a1a",
+                    "on-tertiary": "#ffffff",
+                    "surface-bright": "#fcf9f1",
+                    "secondary-container": "#fdd589",
+                    "on-background": "#1c1c17",
+                    "secondary-fixed-dim": "#e8c177",
+                    "surface-container-high": "#ebe8e0",
+                    "on-error-container": "#93000a",
+                    "on-error": "#ffffff",
+                    "on-surface": "#1c1c17",
+                    "background": "#fcf9f1",
+                    "error-container": "#ffdad6",
+                    "tertiary-fixed-dim": "#f7ba90",
+                    "inverse-primary": "#afcccf",
+                    "primary-fixed-dim": "#afcccf",
+                    "outline-variant": "#c1c8c8",
+                    "surface": "#fcf9f1",
+                    "error": "#ba1a1a",
+                    "on-secondary-container": "#775b1b",
+                    "on-primary-container": "#88a4a7",
+                    "on-tertiary-fixed-variant": "#663d1d",
+                    "inverse-on-surface": "#f3f1e9",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-fixed": "#ffdea3",
+                    "on-secondary": "#ffffff",
+                    "surface-tint": "#486366",
+                    "on-tertiary-fixed": "#301400",
+                    "surface-variant": "#e5e2da",
+                    "primary-container": "#1f3a3d",
+                    "on-primary": "#ffffff",
+                    "outline": "#727879"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "1.5rem",
+                    "container-padding-desktop": "2.5rem",
+                    "stack-md": "1rem",
+                    "container-padding-mobile": "1rem",
+                    "stack-sm": "0.5rem",
+                    "stack-lg": "2rem",
+                    "base": "4px"
+            },
+            "fontFamily": {
+                    "label-sm": ["Inter"],
+                    "body-sm": ["Inter"],
+                    "headline-md": ["Montserrat"],
+                    "body-md": ["Inter"],
+                    "headline-sm": ["Montserrat"],
+                    "display-lg": ["Montserrat"],
+                    "body-lg": ["Inter"],
+                    "label-md": ["Inter"],
+                    "headline-lg": ["Montserrat"],
+                    "headline-lg-mobile": ["Montserrat"]
+            },
+            "fontSize": {
+                    "label-sm": ["12px", {"lineHeight": "1", "fontWeight": "500"}],
+                    "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "headline-sm": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "1.2", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .form-card-shadow {
+            box-shadow: 0px 4px 20px rgba(31, 58, 61, 0.05);
+        }
+        .form-card-hover:hover {
+            box-shadow: 0px 10px 30px rgba(31, 58, 61, 0.08);
+            transform: translateY(-2px);
+        }
+        input:focus, select:focus, textarea:focus {
+            border-color: #C8A45D !important;
+            box-shadow: 0 0 0 2px rgba(200, 164, 93, 0.2) !important;
+            outline: none !important;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1eee6;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #486366;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+<!-- Sidebar (Shared Component Style) -->
+<aside class="fixed left-0 top-0 h-full w-[280px] bg-primary-container shadow-sm p-gutter flex flex-col z-50">
+<div class="mb-10">
+<h1 class="font-headline-lg text-headline-lg font-bold text-on-primary">EstateFlow</h1>
+<p class="font-label-md text-label-md text-on-primary-container opacity-70">Advisory Elite</p>
+</div>
+<nav class="flex-1">
+<div class="flex items-center gap-4 text-on-primary-container/70 hover:text-on-primary px-4 py-3 mb-1 cursor-pointer transition-colors duration-200">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label-md text-label-md">Dashboard</span>
+</div>
+<!-- Properties is active -->
+<div class="flex items-center gap-4 bg-primary text-on-primary rounded-lg px-4 py-3 mb-1 cursor-pointer transition-transform scale-[0.98]">
+<span class="material-symbols-outlined">domain</span>
+<span class="font-label-md text-label-md">Properties</span>
+</div>
+<div class="flex items-center gap-4 text-on-primary-container/70 hover:text-on-primary px-4 py-3 mb-1 cursor-pointer transition-colors duration-200">
+<span class="material-symbols-outlined">groups</span>
+<span class="font-label-md text-label-md">Customers</span>
+</div>
+<div class="flex items-center gap-4 text-on-primary-container/70 hover:text-on-primary px-4 py-3 mb-1 cursor-pointer transition-colors duration-200">
+<span class="material-symbols-outlined">calendar_today</span>
+<span class="font-label-md text-label-md">Appointments</span>
+</div>
+<div class="flex items-center gap-4 text-on-primary-container/70 hover:text-on-primary px-4 py-3 mb-1 cursor-pointer transition-colors duration-200">
+<span class="material-symbols-outlined">assignment</span>
+<span class="font-label-md text-label-md">Tasks</span>
+</div>
+<div class="flex items-center gap-4 text-on-primary-container/70 hover:text-on-primary px-4 py-3 mb-1 cursor-pointer transition-colors duration-200">
+<span class="material-symbols-outlined">analytics</span>
+<span class="font-label-md text-label-md">Reports</span>
+</div>
+</nav>
+<div class="mt-auto pt-6">
+<button class="w-full py-4 px-6 bg-secondary text-white rounded-lg font-label-md text-label-md hover:bg-secondary/90 transition-all">
+                Upgrade to Premium
+            </button>
+</div>
+</aside>
+<!-- Top Navigation -->
+<header class="fixed top-0 right-0 w-[calc(100%-280px)] h-16 bg-surface flex justify-between items-center px-container-padding-desktop z-40 border-b border-outline-variant">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-on-surface-variant font-body-md w-64" placeholder="Search portfolios..." type="text"/>
+</div>
+<div class="flex items-center gap-6">
+<button class="flex items-center gap-2 bg-primary text-on-primary px-4 py-2 rounded-lg font-label-md hover:scale-95 transition-all">
+<span class="material-symbols-outlined text-sm">add</span>
+                Quick Add
+            </button>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer">notifications</span>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest border border-outline overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A professional portrait of a senior luxury real estate advisor in a sharp tailored navy suit, standing against a blurred background of a modern high-end office with warm parchment walls and large windows overlooking a city skyline. The lighting is soft and professional, emphasizing a sophisticated and trustworthy persona for an elite advisory firm." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwE7GJCKN2pfOFQr9fA_sRtIXcohATGh4V8plD_ZqGeKvY6uxLkCLeWtQFRupAEiBXThbNkV15I3WhKdjB2xN9YuA6ec8VyR_X4r5kkalKEuoK3YKptGR60KVv-_4NEU2SHtHj_ki8ZFeei1CPvMuYZsitkbZvrJtHp-wxgVnO_l1cBMz1xN3KAk9ATbZXj9cXDdY3_nmuiFvsu891BzkKx7iA9b8KYa1I2h7E-EdwTR4QmdAV6VR9PLxCcip00k-wg4kHNsJXMkIP"/>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="ml-[280px] mt-16 p-10 max-w-[1440px] mx-auto min-h-screen">
+<!-- Header Section -->
+<div class="flex justify-between items-end mb-10">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-2">New Listing</h2>
+<p class="text-on-surface-variant font-body-md">Create a new high-end property entry for your advisory portfolio.</p>
+</div>
+<div class="flex gap-4">
+<button class="px-8 py-3 border border-outline text-primary font-label-md rounded-lg hover:bg-surface-container-low transition-all">
+                    Cancel
+                </button>
+<button class="px-8 py-3 bg-primary text-on-primary font-label-md rounded-lg hover:shadow-lg transition-all relative overflow-hidden group">
+<span class="relative z-10">Save Property</span>
+<div class="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform"></div>
+</button>
+</div>
+</div>
+<!-- Form Grid Layout -->
+<form class="grid grid-cols-12 gap-gutter">
+<!-- Left Column: Primary Details -->
+<div class="col-span-12 lg:col-span-8 space-y-gutter">
+<!-- Section 1: Basic Info -->
+<section class="bg-white p-8 rounded-xl form-card-shadow transition-all duration-300">
+<div class="flex items-center gap-3 mb-6">
+<div class="w-2 h-6 bg-secondary rounded-full"></div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Basic Information</h3>
+</div>
+<div class="grid grid-cols-2 gap-6">
+<div class="col-span-2">
+<label class="block font-label-md text-label-md text-on-surface-variant mb-2">PROPERTY TITLE</label>
+<input class="w-full border-outline-variant bg-surface-container-lowest rounded-lg p-3" placeholder="e.g. The Penthouse at Azure Heights" type="text"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-2">PROPERTY TYPE</label>
+<select class="w-full border-outline-variant bg-surface-container-lowest rounded-lg p-3">
+<option>Residential - Apartment</option>
+<option>Residential - Villa</option>
+<option>Commercial - Office</option>
+<option>Land - Development</option>
+<option>Hospitality</option>
+</select>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-2">VALUATION (USD)</label>
+<div class="relative">
+<span class="absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">$</span>
+<input class="w-full border-outline-variant bg-surface-container-lowest rounded-lg p-3 pl-8" placeholder="0.00" type="number"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: Location Details -->
+<section class="bg-white p-8 rounded-xl form-card-shadow transition-all duration-300">
+<div class="flex items-center gap-3 mb-6">
+<div class="w-2 h-6 bg-secondary rounded-full"></div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Location</h3>
+</div>
+<div class="grid grid-cols-2 gap-6">
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-2">CITY / DISTRICT</label>
+<input class="w-full border-outline-variant bg-surface-container-lowest rounded-lg p-3" placeholder="e.g. Manhattan, New York" type="text"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-2">POSTAL CODE</label>
+<input class="w-full border-outline-variant bg-surface-container-lowest rounded-lg p-3" placeholder="10001" type="text"/>
+</div>
+<div class="col-span-2">
+<label class="block font-label-md text-label-md text-on-surface-variant mb-2">FULL ADDRESS</label>
+<textarea class="w-full border-outline-variant bg-surface-container-lowest rounded-lg p-3" placeholder="Enter the exact street address and unit number..." rows="3"></textarea>
+</div>
+</div>
+<!-- Map Placeholder -->
+<div class="mt-6 rounded-lg overflow-hidden h-48 border border-outline-variant relative">
+<div class="absolute inset-0 bg-surface-container-low flex items-center justify-center flex-col opacity-50">
+<span class="material-symbols-outlined text-4xl mb-2">map</span>
+<p class="font-label-md text-label-md uppercase">Map Preview</p>
+</div>
+<img class="w-full h-full object-cover" data-location="Manhattan, New York" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpwPxjr6qYZurMQkkLGh2Ut1rJ01oqwpo1ePVLecbvpWjTl8DK6mbHS1QuahoW7TC5EXjHtWO2U1Wv5edOsG0DLXBO7RT4-agc97T5__Q2kcShuTRNi-BwgQB0Zb9C-lbvXXhfwBrTAVvkLFpiUwe1j-1dSV5k1EHgYl907tW3N_wUlFgrokHph_ymJYKPBBYCDwuZ3mvCdpG0bI9p4UEfM89HPXb5Qg2WUMB5Zeu7s_5h0ku5oQhFly4h9vojDybcOW1cKk5CObBk"/>
+</div>
+</section>
+<!-- Section 3: Technical Specifications -->
+<section class="bg-white p-8 rounded-xl form-card-shadow transition-all duration-300">
+<div class="flex items-center gap-3 mb-6">
+<div class="w-2 h-6 bg-secondary rounded-full"></div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Property Details</h3>
+</div>
+<div class="grid grid-cols-3 gap-6">
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-2">SQ METERS</label>
+<input class="w-full border-outline-variant bg-surface-container-lowest rounded-lg p-3" placeholder="0" type="number"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-2">ROOMS</label>
+<input class="w-full border-outline-variant bg-surface-container-lowest rounded-lg p-3" placeholder="0" type="number"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-2">BATHROOMS</label>
+<input class="w-full border-outline-variant bg-surface-container-lowest rounded-lg p-3" placeholder="0" type="number"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-2">BUILDING AGE</label>
+<input class="w-full border-outline-variant bg-surface-container-lowest rounded-lg p-3" placeholder="Years" type="number"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-2">FLOOR LEVEL</label>
+<input class="w-full border-outline-variant bg-surface-container-lowest rounded-lg p-3" placeholder="e.g. 42" type="number"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-2">ENERGY RATING</label>
+<select class="w-full border-outline-variant bg-surface-container-lowest rounded-lg p-3">
+<option>A+</option>
+<option>A</option>
+<option>B</option>
+<option>C</option>
+</select>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column: Contextual & Owner Info -->
+<div class="col-span-12 lg:col-span-4 space-y-gutter">
+<!-- Section 4: Image Upload -->
+<section class="bg-white p-8 rounded-xl form-card-shadow">
+<div class="flex items-center gap-3 mb-6">
+<div class="w-2 h-6 bg-secondary rounded-full"></div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Media</h3>
+</div>
+<div class="border-2 border-dashed border-outline-variant rounded-xl p-10 flex flex-col items-center justify-center text-center cursor-pointer hover:bg-surface-container-low transition-all">
+<span class="material-symbols-outlined text-4xl text-on-primary-container mb-4">add_a_photo</span>
+<p class="font-label-md text-label-md text-primary mb-2">DRAG &amp; DROP IMAGES</p>
+<p class="text-on-surface-variant text-body-sm px-4">Upload professional photography (Min 3000px wide for high-fidelity viewing)</p>
+</div>
+<div class="grid grid-cols-3 gap-2 mt-4">
+<div class="aspect-square bg-surface-container rounded overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A luxurious minimalist living room interior with floor-to-ceiling windows showing a cinematic sunset over a coastal landscape. The room features high-end Italian furniture in neutral tones, rich oak wood flooring, and subtle warm parchment wall textures. The lighting is soft and golden, creating an atmosphere of exclusivity and quiet luxury consistent with a premium real estate advisory brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVgLBLmQhcT47sh-BU9EAotsrgjO93iHlUi1Sfqv8uHdA40buxmpARQZC1eczs-hkPn7rRlHWOhk7sSLiPFRArPab1P9A9tD-LOOduSc7q7VcPie7Hin-oyXeiUWw1HL_07RtDI7al8EeGbj9YZ6XaHq9op6B0f0N6HGg9qNyD0RL3e_Mn0kw1r9_K9MjaQwPEGc7wbLhl7jGjBtQ_A3lGBKEimKtbXCAGRy8Vy27GwN2Qgziqg8_S9nK3luH4bf8ZM5vNP4r27Val"/>
+</div>
+<div class="aspect-square bg-surface-container rounded overflow-hidden flex items-center justify-center">
+<span class="material-symbols-outlined text-outline">image</span>
+</div>
+<div class="aspect-square bg-surface-container rounded overflow-hidden flex items-center justify-center">
+<span class="material-symbols-outlined text-outline">image</span>
+</div>
+</div>
+</section>
+<!-- Section 5: Owner Information -->
+<section class="bg-white p-8 rounded-xl form-card-shadow">
+<div class="flex items-center gap-3 mb-6">
+<div class="w-2 h-6 bg-secondary rounded-full"></div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Ownership</h3>
+</div>
+<div class="space-y-4">
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-2">FULL NAME</label>
+<input class="w-full border-outline-variant bg-surface-container-lowest rounded-lg p-3" placeholder="Owner or Entity Name" type="text"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-2">DIRECT PHONE</label>
+<input class="w-full border-outline-variant bg-surface-container-lowest rounded-lg p-3" placeholder="+1 (555) 000-0000" type="tel"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-2">EMAIL ADDRESS</label>
+<input class="w-full border-outline-variant bg-surface-container-lowest rounded-lg p-3" placeholder="owner@domain.com" type="email"/>
+</div>
+<div class="pt-4 flex items-center gap-3">
+<input class="rounded text-primary focus:ring-primary border-outline-variant" id="nda" type="checkbox"/>
+<label class="font-body-sm text-on-surface-variant" for="nda">Confidential Listing (Require NDA)</label>
+</div>
+</div>
+</section>
+<!-- Section 6: Tags & Categories -->
+<section class="bg-white p-8 rounded-xl form-card-shadow">
+<div class="flex items-center gap-3 mb-6">
+<div class="w-2 h-6 bg-secondary rounded-full"></div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Classification</h3>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-container-high text-on-surface-variant rounded-full text-label-sm cursor-pointer hover:bg-secondary hover:text-white transition-colors">PENTHOUSE</span>
+<span class="px-3 py-1 bg-secondary text-white rounded-full text-label-sm cursor-pointer">WATERFRONT</span>
+<span class="px-3 py-1 bg-surface-container-high text-on-surface-variant rounded-full text-label-sm cursor-pointer hover:bg-secondary hover:text-white transition-colors">HISTORIC</span>
+<span class="px-3 py-1 bg-surface-container-high text-on-surface-variant rounded-full text-label-sm cursor-pointer hover:bg-secondary hover:text-white transition-colors">INVESTMENT</span>
+<button class="px-3 py-1 border border-dashed border-outline-variant rounded-full text-label-sm text-outline hover:border-primary hover:text-primary">+ ADD TAG</button>
+</div>
+</section>
+</div>
+</form>
+<!-- Form Footer -->
+<div class="mt-12 flex items-center justify-between py-6 border-t border-outline-variant">
+<div class="flex items-center gap-2 text-on-surface-variant text-body-sm">
+<span class="material-symbols-outlined text-sm">info</span>
+                Draft auto-saved 2 minutes ago
+            </div>
+<div class="flex gap-4">
+<button class="px-8 py-3 border border-outline text-primary font-label-md rounded-lg hover:bg-surface-container-low transition-all">
+                    Discard Draft
+                </button>
+<button class="px-10 py-3 bg-secondary text-white font-label-md rounded-lg hover:bg-secondary/90 shadow-md transform hover:-translate-y-1 transition-all">
+                    Publish to Portfolio
+                </button>
+</div>
+</div>
+</main>
+<!-- Floating Action Button Contextual Suppression: Not needed on form screen as per logic -->
+<script>
+        // Simple micro-interactions for input fields
+        const inputs = document.querySelectorAll('input, select, textarea');
+        inputs.forEach(input => {
+            input.addEventListener('focus', () => {
+                const card = input.closest('section');
+                if (card) {
+                    card.classList.add('ring-1', 'ring-secondary/20');
+                }
+            });
+            input.addEventListener('blur', () => {
+                const card = input.closest('section');
+                if (card) {
+                    card.classList.remove('ring-1', 'ring-secondary/20');
+                }
+            });
+        });
+
+        // Add sticky header behavior on scroll
+        const header = document.querySelector('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-md');
+            } else {
+                header.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body></html>

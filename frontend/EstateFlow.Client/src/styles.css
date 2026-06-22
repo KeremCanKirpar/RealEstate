@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #fcf9f1;
+  color: #1c1c17;
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1eee6;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c8c8;
+  border-radius: 9999px;
+}
+
+.luxury-card {
+  border: 1px solid rgba(193, 200, 200, 0.7);
+  background: #ffffff;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 20px rgba(31, 58, 61, 0.05);
+}
+
+.luxury-card-hover {
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.luxury-card-hover:hover {
+  transform: scale(1.01);
+  box-shadow: 0 10px 30px rgba(31, 58, 61, 0.08);
+  border-color: #c1c8c8;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 4px 30px rgba(31, 58, 61, 0.12);
+}

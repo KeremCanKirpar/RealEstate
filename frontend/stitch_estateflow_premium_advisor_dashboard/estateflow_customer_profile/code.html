@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Customer Profile | EstateFlow Advisory Elite</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed": "#ffdcc6",
+                    "tertiary-container": "#522c0d",
+                    "surface-container-low": "#f6f3eb",
+                    "surface-dim": "#dcdad2",
+                    "on-primary-fixed-variant": "#304b4e",
+                    "inverse-surface": "#31312b",
+                    "primary-fixed": "#cbe8eb",
+                    "on-tertiary-container": "#ca926b",
+                    "on-primary-fixed": "#021f22",
+                    "primary": "#072427",
+                    "surface-container-highest": "#e5e2da",
+                    "surface-container": "#f1eee6",
+                    "on-secondary-fixed": "#261900",
+                    "tertiary": "#371800",
+                    "on-secondary-fixed-variant": "#5c4202",
+                    "on-surface-variant": "#414849",
+                    "secondary": "#775a1a",
+                    "on-tertiary": "#ffffff",
+                    "surface-bright": "#fcf9f1",
+                    "secondary-container": "#fdd589",
+                    "on-background": "#1c1c17",
+                    "secondary-fixed-dim": "#e8c177",
+                    "surface-container-high": "#ebe8e0",
+                    "on-error-container": "#93000a",
+                    "on-error": "#ffffff",
+                    "on-surface": "#1c1c17",
+                    "background": "#fcf9f1",
+                    "error-container": "#ffdad6",
+                    "tertiary-fixed-dim": "#f7ba90",
+                    "inverse-primary": "#afcccf",
+                    "primary-fixed-dim": "#afcccf",
+                    "outline-variant": "#c1c8c8",
+                    "surface": "#fcf9f1",
+                    "error": "#ba1a1a",
+                    "on-secondary-container": "#775b1b",
+                    "on-primary-container": "#88a4a7",
+                    "on-tertiary-fixed-variant": "#663d1d",
+                    "inverse-on-surface": "#f3f1e9",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-fixed": "#ffdea3",
+                    "on-secondary": "#ffffff",
+                    "surface-tint": "#486366",
+                    "on-tertiary-fixed": "#301400",
+                    "surface-variant": "#e5e2da",
+                    "primary-container": "#1f3a3d",
+                    "on-primary": "#ffffff",
+                    "outline": "#727879"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "1.5rem",
+                    "container-padding-desktop": "2.5rem",
+                    "stack-md": "1rem",
+                    "container-padding-mobile": "1rem",
+                    "stack-sm": "0.5rem",
+                    "stack-lg": "2rem",
+                    "base": "4px"
+            },
+            "fontFamily": {
+                    "label-sm": ["Inter"],
+                    "body-sm": ["Inter"],
+                    "headline-md": ["Montserrat"],
+                    "body-md": ["Inter"],
+                    "headline-sm": ["Montserrat"],
+                    "display-lg": ["Montserrat"],
+                    "body-lg": ["Inter"],
+                    "label-md": ["Inter"],
+                    "headline-lg": ["Montserrat"],
+                    "headline-lg-mobile": ["Montserrat"]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .luxury-card-shadow {
+            box-shadow: 0px 4px 20px rgba(31, 58, 61, 0.05);
+        }
+        .luxury-card-hover:hover {
+            box-shadow: 0px 10px 30px rgba(31, 58, 61, 0.08);
+            transform: translateY(-2px);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md min-h-screen">
+<!-- Sidebar Navigation Shell -->
+<aside class="fixed left-0 top-0 h-full w-[280px] bg-primary-container shadow-sm flex flex-col p-gutter z-50">
+<div class="mb-10">
+<h1 class="font-headline-lg text-headline-lg font-bold text-on-primary">EstateFlow</h1>
+<p class="font-label-md text-label-md text-on-primary-container">Advisory Elite</p>
+</div>
+<nav class="flex-grow">
+<ul class="space-y-1">
+<li><a class="flex items-center gap-4 text-on-primary-container/70 hover:text-on-primary px-4 py-3 mb-1 hover:bg-primary/50 transition-colors duration-200 rounded-lg" href="#"><span class="material-symbols-outlined">dashboard</span> <span class="font-label-md text-label-md">Dashboard</span></a></li>
+<li><a class="flex items-center gap-4 text-on-primary-container/70 hover:text-on-primary px-4 py-3 mb-1 hover:bg-primary/50 transition-colors duration-200 rounded-lg" href="#"><span class="material-symbols-outlined">domain</span> <span class="font-label-md text-label-md">Properties</span></a></li>
+<li><a class="flex items-center gap-4 bg-primary text-on-primary rounded-lg px-4 py-3 mb-1 transition-transform scale-[0.98]" href="#"><span class="material-symbols-outlined">groups</span> <span class="font-label-md text-label-md">Customers</span></a></li>
+<li><a class="flex items-center gap-4 text-on-primary-container/70 hover:text-on-primary px-4 py-3 mb-1 hover:bg-primary/50 transition-colors duration-200 rounded-lg" href="#"><span class="material-symbols-outlined">calendar_today</span> <span class="font-label-md text-label-md">Appointments</span></a></li>
+<li><a class="flex items-center gap-4 text-on-primary-container/70 hover:text-on-primary px-4 py-3 mb-1 hover:bg-primary/50 transition-colors duration-200 rounded-lg" href="#"><span class="material-symbols-outlined">assignment</span> <span class="font-label-md text-label-md">Tasks</span></a></li>
+<li><a class="flex items-center gap-4 text-on-primary-container/70 hover:text-on-primary px-4 py-3 mb-1 hover:bg-primary/50 transition-colors duration-200 rounded-lg" href="#"><span class="material-symbols-outlined">analytics</span> <span class="font-label-md text-label-md">Reports</span></a></li>
+<li><a class="flex items-center gap-4 text-on-primary-container/70 hover:text-on-primary px-4 py-3 mb-1 hover:bg-primary/50 transition-colors duration-200 rounded-lg" href="#"><span class="material-symbols-outlined">description</span> <span class="font-label-md text-label-md">Documents</span></a></li>
+<li><a class="flex items-center gap-4 text-on-primary-container/70 hover:text-on-primary px-4 py-3 mb-1 hover:bg-primary/50 transition-colors duration-200 rounded-lg" href="#"><span class="material-symbols-outlined">settings</span> <span class="font-label-md text-label-md">Settings</span></a></li>
+</ul>
+</nav>
+<div class="mt-auto">
+<button class="w-full bg-secondary text-on-secondary font-label-md text-label-md py-4 rounded-lg shadow-sm hover:opacity-90 transition-opacity">
+                Upgrade to Premium
+            </button>
+</div>
+</aside>
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 right-0 w-[calc(100%-280px)] h-16 bg-surface border-b border-outline-variant flex justify-between items-center px-container-padding-desktop z-40">
+<div class="flex items-center gap-6">
+<div class="relative">
+<span class="absolute inset-y-0 left-0 pl-3 flex items-center text-outline">
+<span class="material-symbols-outlined">search</span>
+</span>
+<input class="pl-10 pr-4 py-2 bg-surface-container-low border-none rounded-full w-64 focus:ring-2 focus:ring-secondary text-body-sm font-body-sm" placeholder="Search profiles, properties..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="relative text-primary hover:text-secondary transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-0 right-0 block h-2 w-2 rounded-full bg-error ring-2 ring-surface"></span>
+</button>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-lg font-label-md text-label-md hover:bg-primary-container transition-colors">
+                Quick Add
+            </button>
+<div class="flex items-center gap-3 ml-4">
+<div class="text-right hidden sm:block">
+<p class="font-label-md text-label-md text-primary">Julian Vane</p>
+<p class="text-[10px] text-outline-variant uppercase tracking-widest">Senior Partner</p>
+</div>
+<img class="h-10 w-10 rounded-full object-cover ring-2 ring-secondary/20" data-alt="A professional studio headshot of a high-end real estate advisor in a sharp navy blazer, set against a blurred luxury office background with warm amber lighting. The style is crisp, editorial, and conveys deep expertise and trustworthiness, following a minimalist corporate aesthetic with deep teal accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyN0cNIhGCxPUNnyDweZSGuqtL7r77Z2U1mcuFw1K52FrL06LO1XkCGsPPljpJDn5bqGKuTq-tSn57w7D5sH6_9d-XMPkaB8MtG1-ogXaf0v2ASmyh_-d4we8u2ck6My6buvSYsXC0gTMfkegFoIdOt518gY4XBEonkytEE5EJZbCZGDsD7jkd2Nybx12mTcZoXP5Tg7oM-6vwRwCWZBbA0-cBSo_D-OffzqyzbWnMU8uk2R47yIhdVj7SRg4oeCt1OYTcr2gaWZNe"/>
+</div>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="ml-[280px] pt-16 p-container-padding-desktop max-w-[1440px]">
+<!-- Page Header / Breadcrumbs -->
+<div class="flex justify-between items-end mb-8">
+<div>
+<nav class="flex text-label-sm text-outline mb-2 gap-2">
+<span>Customers</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-secondary">Julianne Stirling</span>
+</nav>
+<h2 class="font-headline-lg text-headline-lg text-primary">Client Profile</h2>
+</div>
+<div class="flex gap-4">
+<button class="flex items-center gap-2 border border-outline px-6 py-2.5 rounded-lg font-label-md text-label-md text-primary hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined">edit_note</span> Add Note
+                </button>
+<button class="flex items-center gap-2 bg-secondary text-on-secondary px-6 py-2.5 rounded-lg font-label-md text-label-md hover:opacity-90 transition-all shadow-md">
+<span class="material-symbols-outlined">event_available</span> Create Appointment
+                </button>
+</div>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-12 gap-6 items-start">
+<!-- Profile Card (Level 1) -->
+<div class="col-span-12 lg:col-span-4 bg-surface-container-lowest luxury-card-shadow rounded-xl p-8 border border-outline-variant/30">
+<div class="flex flex-col items-center text-center">
+<div class="relative mb-6">
+<img class="w-32 h-32 rounded-full object-cover border-4 border-secondary/10 p-1" data-alt="Close up portrait of an elegant woman in her late 40s with a sophisticated, professional look, wearing a silk cream blouse and subtle gold jewelry. The photography is soft-focus with natural lighting, evoking a sense of refined wealth and focused intentionality. The background is a clean, bright, minimalist interior." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjkTVJtXts77mPU4NVJkcqf-GQs0oYNw67F09PiRgj3pkShInzQN5QNPGlhvrgCJH59pucEKbDnaedqVk0PvM4wkBtiugc1hpL0YP-FdvYg26vFBDTaAR-0zvpTuLlWGdwp9JrTuQKWZDOIhoKpmYydSce7wFZ3A2ZzvHbMoeCOmVqkobFw0ge2gc3UPfNdWWhskwM0kWcdbPwlJIq6g4jWFDCk4VuIru0l_3EKTxpFtZvtyMG5fuR2CmVTcgjuRunud-deK6eddQN"/>
+<div class="absolute bottom-1 right-1 h-6 w-6 bg-green-500 border-4 border-surface-container-lowest rounded-full"></div>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-1">Julianne Stirling</h3>
+<p class="font-body-md text-body-md text-outline mb-6">Private Wealth Client • Ultra-High Net Worth</p>
+<div class="flex gap-2 mb-8">
+<span class="bg-primary/5 text-primary-container px-3 py-1 rounded-full text-[12px] font-semibold border border-primary/10 uppercase tracking-wider">Acquisition Phase</span>
+<span class="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-[12px] font-semibold border border-secondary/20 uppercase tracking-wider">Platinum</span>
+</div>
+<div class="w-full space-y-4 text-left border-t border-outline-variant/30 pt-6">
+<div class="flex justify-between items-center">
+<span class="text-label-md text-outline font-label-md uppercase">Email</span>
+<span class="text-body-md text-primary font-medium">j.stirling@globalv.com</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-label-md text-outline font-label-md uppercase">Phone</span>
+<span class="text-body-md text-primary font-medium">+44 7700 900452</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-label-md text-outline font-label-md uppercase">Origin</span>
+<span class="text-body-md text-primary font-medium">Zurich, CH</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Preferences & Budget -->
+<div class="col-span-12 lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Budget Card -->
+<div class="bg-surface-container-lowest luxury-card-shadow rounded-xl p-6 border border-outline-variant/30 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-6">
+<div class="p-3 bg-secondary-container/30 rounded-lg text-secondary">
+<span class="material-symbols-outlined">payments</span>
+</div>
+<span class="text-label-sm text-outline font-label-sm uppercase tracking-tighter">Budget Range</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-primary mb-2">£8.5M – £12.0M</h4>
+<p class="text-body-sm text-outline-variant">Liquidity confirmed via Advisory Partners Ltd.</p>
+</div>
+<div class="mt-6">
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 75%"></div>
+</div>
+<div class="flex justify-between mt-2">
+<span class="text-[10px] font-bold text-outline uppercase">Min</span>
+<span class="text-[10px] font-bold text-secondary uppercase">Preference Peak</span>
+<span class="text-[10px] font-bold text-outline uppercase">Max</span>
+</div>
+</div>
+</div>
+<!-- Desired Location -->
+<div class="bg-surface-container-lowest luxury-card-shadow rounded-xl p-6 border border-outline-variant/30 overflow-hidden relative group">
+<div class="absolute inset-0 opacity-10 grayscale group-hover:grayscale-0 transition-all duration-700 pointer-events-none">
+<div class="w-full h-full bg-cover bg-center" data-alt="A stylized minimalist map of London's Mayfair and Belgravia districts, using a sophisticated architectural color palette of soft creams, deep teals, and gold accents. The map shows elegant grid lines and highlights key premium real estate zones in a high-fashion, high-wealth aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD6xIg91Pn93zDjnWqX94KPrrcduzAMP5WsfXyvrfi5XIqjkPHiebsFn6OPVYlGxYz36PObzXNnAgFM_NdXQDXRQkkjVN0DrxHAQzv_ZIPR5VtOdIJ1DSJ1gfOV_AdT5zS3KXlLZ7NfabolZSKbt03OGQeC9jG9IGjrbmmBl0m8Nf7Fv8Uinrs04R7xF4YLKjDXXC41_6GWgx_Ki9bsruSaigSw0eDUvuQNjU-hKGc3qz-LxPX2M8pkb56gPZU4waImBVwldZhnssFt')"></div>
+</div>
+<div class="relative z-10">
+<div class="flex justify-between items-start mb-6">
+<div class="p-3 bg-primary-container/10 rounded-lg text-primary">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<span class="text-label-sm text-outline font-label-sm uppercase tracking-tighter">Primary Target</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary mb-1">Mayfair &amp; Belgravia</h4>
+<p class="text-body-sm text-outline mb-4">Central London, United Kingdom</p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-surface-container px-3 py-1 rounded-full text-[11px] font-bold text-primary-container border border-outline-variant">Gated Access</span>
+<span class="bg-surface-container px-3 py-1 rounded-full text-[11px] font-bold text-primary-container border border-outline-variant">Historic Grade II</span>
+<span class="bg-surface-container px-3 py-1 rounded-full text-[11px] font-bold text-primary-container border border-outline-variant">Modern HVAC</span>
+</div>
+</div>
+</div>
+<!-- Timeline & Activity -->
+<div class="col-span-1 md:col-span-2 bg-surface-container-lowest luxury-card-shadow rounded-xl p-6 border border-outline-variant/30">
+<div class="flex justify-between items-center mb-6">
+<h4 class="font-headline-sm text-headline-sm text-primary">Engagement Timeline</h4>
+<button class="text-secondary font-label-md text-label-md flex items-center gap-1 hover:underline">
+                            View Full History <span class="material-symbols-outlined text-sm">open_in_new</span>
+</button>
+</div>
+<div class="relative">
+<!-- Timeline Line -->
+<div class="absolute left-[15px] top-2 bottom-2 w-px bg-outline-variant"></div>
+<div class="space-y-8">
+<!-- Timeline Item -->
+<div class="relative pl-10">
+<div class="absolute left-0 top-1 w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center ring-4 ring-surface-container-lowest text-primary">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+</div>
+<div>
+<p class="font-body-md font-semibold text-primary">Viewed "The Kensington Penthouse"</p>
+<p class="text-body-sm text-outline">Yesterday at 14:20 • Private Viewing session</p>
+<p class="mt-2 text-body-sm text-outline-variant italic">"Expressed high interest in the floor-to-ceiling glass and terrace views. Requested structural plans."</p>
+</div>
+</div>
+<div class="relative pl-10">
+<div class="absolute left-0 top-1 w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center ring-4 ring-surface-container-lowest text-secondary">
+<span class="material-symbols-outlined text-[16px]">mail</span>
+</div>
+<div>
+<p class="font-body-md font-semibold text-primary">Finance Documentation Received</p>
+<p class="text-body-sm text-outline">Oct 24, 2023 • Secured via Portal</p>
+</div>
+</div>
+<div class="relative pl-10">
+<div class="absolute left-0 top-1 w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center ring-4 ring-surface-container-lowest text-primary">
+<span class="material-symbols-outlined text-[16px]">person_add</span>
+</div>
+<div>
+<p class="font-body-md font-semibold text-primary">Initial Consultation Complete</p>
+<p class="text-body-sm text-outline">Oct 20, 2023 • Meeting with Julian Vane</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Matched Properties Section (Level 2 Hover Effects) -->
+<div class="col-span-12 mt-4">
+<div class="flex items-center justify-between mb-6">
+<div>
+<h4 class="font-headline-sm text-headline-sm text-primary">AI-Matched Property Portfolio</h4>
+<p class="text-body-sm text-outline">Highly relevant selections based on Stirling's preference profile.</p>
+</div>
+<div class="flex gap-2">
+<button class="p-2 border border-outline-variant rounded-lg hover:bg-surface-container transition-colors"><span class="material-symbols-outlined">chevron_left</span></button>
+<button class="p-2 border border-outline-variant rounded-lg hover:bg-surface-container transition-colors"><span class="material-symbols-outlined">chevron_right</span></button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Property Card 1 -->
+<div class="group bg-surface-container-lowest luxury-card-shadow rounded-xl overflow-hidden border border-outline-variant/30 transition-all duration-300 luxury-card-hover cursor-pointer">
+<div class="relative h-56">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A high-angle architectural photograph of a luxury penthouse terrace in Kensington, London. The space features modern outdoor furniture, minimalist glass railings, and a panoramic view of the London skyline during a golden-hour sunset. The lighting is warm and rich, highlighting premium stone textures and lush terrace plants." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYOn_VeMebxb-p3g0JnLcGEQ2v6zDnNSOiBZhdI3SSS2MOTIwFqcfXDltF-xkRlcGia7M5DiqCFld2_BFCdnQVdgKfXAd1oKRbFWNvvYeHzYkQe6HQeP0im67OzAfY0o7edLlRJk6RnrnxO7lCGZJaOC-EdE3RGsoNa84IbLARwfn4nhdOhhrjAEQcZKxFL6BtUdLvV1bpmq6AKZp9vgl6JxrmNdtVtdTjbJ9CFVdusJAYwUrvjG7QKibYcCkkbnVg-2CNmZsC5eVb"/>
+<div class="absolute top-4 left-4 bg-primary text-on-primary px-3 py-1 rounded-md text-[11px] font-bold uppercase tracking-widest">Exclusive Match</div>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur text-primary p-2 rounded-full shadow-sm">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h5 class="font-headline-sm text-headline-sm text-primary leading-tight">The Kensington Sky Penthouse</h5>
+<span class="text-secondary font-bold">£10.2M</span>
+</div>
+<p class="text-body-sm text-outline mb-6">4 Bed • 4.5 Bath • 4,200 sq.ft</p>
+<div class="flex justify-between items-center pt-4 border-t border-outline-variant/20">
+<div class="flex items-center gap-1 text-[12px] font-bold text-green-700 bg-green-50 px-2 py-1 rounded">
+<span class="material-symbols-outlined text-[14px]">bolt</span> 98% Match
+                                </div>
+<button class="text-primary font-label-md text-label-md uppercase tracking-wider group-hover:text-secondary transition-colors">Details</button>
+</div>
+</div>
+</div>
+<!-- Property Card 2 -->
+<div class="group bg-surface-container-lowest luxury-card-shadow rounded-xl overflow-hidden border border-outline-variant/30 transition-all duration-300 luxury-card-hover cursor-pointer">
+<div class="relative h-56">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="The grand exterior of a Grade II listed Georgian townhouse in Belgravia, London. The building features pristine white stucco, a massive black lacquered front door with brass fittings, and elegant symmetrical windows. The street is quiet and upscale, with a classic vintage luxury car parked nearby. Moody, overcast morning light provides a timeless, exclusive feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmbCis9c3GeAW0Ylm6uKJmPX4eIdygcYblYWvfhpBLg1JW8mocpcEHD-C0Ah9kmdKWsArLQs15xidkLtNJ9NGPHNoaLklI9IYkV6C0bJRt6MlMMi0b9aK4bvF0HePEdRkNmHg3d9vQPxXizuaUDScMwsx_ZNl5Fh9JkBjUudyNiyGGWJwxuT91hH80LDJj5U913_Za8Wg9PDNgU9r8_l2ZI4UaNJ2lOTGg9oogiA6i1WWZ7PBsMPZ-gM79tKhk3TEPYMFh8URh8e4b"/>
+<div class="absolute top-4 left-4 bg-tertiary text-on-tertiary px-3 py-1 rounded-md text-[11px] font-bold uppercase tracking-widest">Heritage Tier</div>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur text-primary p-2 rounded-full shadow-sm">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h5 class="font-headline-sm text-headline-sm text-primary leading-tight">Eaton Square Stucco House</h5>
+<span class="text-secondary font-bold">£11.8M</span>
+</div>
+<p class="text-body-sm text-outline mb-6">6 Bed • 5 Bath • 5,800 sq.ft</p>
+<div class="flex justify-between items-center pt-4 border-t border-outline-variant/20">
+<div class="flex items-center gap-1 text-[12px] font-bold text-green-700 bg-green-50 px-2 py-1 rounded">
+<span class="material-symbols-outlined text-[14px]">bolt</span> 94% Match
+                                </div>
+<button class="text-primary font-label-md text-label-md uppercase tracking-wider group-hover:text-secondary transition-colors">Details</button>
+</div>
+</div>
+</div>
+<!-- Property Card 3 -->
+<div class="group bg-surface-container-lowest luxury-card-shadow rounded-xl overflow-hidden border border-outline-variant/30 transition-all duration-300 luxury-card-hover cursor-pointer">
+<div class="relative h-56">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A modern architectural masterpiece situated in a leafy, secluded area of Hampstead. The house features floor-to-ceiling glass walls, warm timber cladding, and a sleek infinity pool that reflects the surrounding lush garden. The interior visible through the glass shows a minimalist, high-end living space with designer lighting and art." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSAv4mh8NrVe5n-MGgs8Ecqle10m8w1RVWYJLJYx_-LQyUiimfvPhOFrfpeDHMzxmqQ4nAlmUIi4UzJhyWaVDYgaZIMq5Z4vRbd3II22RUTOEvREMsmQLPjKoEH5Q-eAh8-gon2sMuUutFVKhC0bvScTS-leGzjhV6nNYorkxhoLyW6tXcCjLZMcPXiVBwPQQPs4sN5L0v4MvsutenDUWxeM5klVxgtiHlfPThZ5DMAA-SsrXWaSWYWydVp4XauVz55GAtg5Cny0gC"/>
+<div class="absolute top-4 left-4 bg-primary text-on-primary px-3 py-1 rounded-md text-[11px] font-bold uppercase tracking-widest">New Discovery</div>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur text-primary p-2 rounded-full shadow-sm">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h5 class="font-headline-sm text-headline-sm text-primary leading-tight">The Glass Pavillion Hampstead</h5>
+<span class="text-secondary font-bold">£9.1M</span>
+</div>
+<p class="text-body-sm text-outline mb-6">5 Bed • 6 Bath • 4,500 sq.ft</p>
+<div class="flex justify-between items-center pt-4 border-t border-outline-variant/20">
+<div class="flex items-center gap-1 text-[12px] font-bold text-green-700 bg-green-50 px-2 py-1 rounded">
+<span class="material-symbols-outlined text-[14px]">bolt</span> 89% Match
+                                </div>
+<button class="text-primary font-label-md text-label-md uppercase tracking-wider group-hover:text-secondary transition-colors">Details</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Micro-interaction JS -->
+<script>
+        document.querySelectorAll('.luxury-card-hover').forEach(card => {
+            card.addEventListener('mousedown', () => {
+                card.style.transform = 'scale(0.98)';
+            });
+            card.addEventListener('mouseup', () => {
+                card.style.transform = 'scale(1.01)';
+            });
+        });
+
+        // Search bar focus effect
+        const searchInput = document.querySelector('input[type="text"]');
+        searchInput.addEventListener('focus', () => {
+            searchInput.parentElement.classList.add('ring-2', 'ring-secondary/30');
+        });
+        searchInput.addEventListener('blur', () => {
+            searchInput.parentElement.classList.remove('ring-2', 'ring-secondary/30');
+        });
+    </script>
+</body></html>
